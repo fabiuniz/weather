@@ -1,6 +1,3 @@
 # Arquivos de ambiente
 .env
 .my_env
-
-# Outros arquivos ignorados
-weather.png
