@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Qualidade do Ar</title>
+	<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" type="image/svg+xml">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Qualidade do Ar</h1>
+        <input type="text" id="cidade" placeholder="Digite o nome da cidade" list="cidadesSugestoes">
+        <datalist id="cidadesSugestoes"></datalist>
+        <button onclick="consultarAr()">Consultar Qualidade do Ar</button>
+        <div id="loadingSpinner" class="spinner"></div>
+        <div id="resultado"></div>
+        <canvas id="airQualityChart" width="400" height="200" style="display: none;"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="{{ url_for('static', filename='script.js') }}"></script> 
+</body>
+</html>
